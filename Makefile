@@ -211,9 +211,9 @@ demo-github-cli:
 	docker compose exec github-processor python3 -m cli list-repos
 	@echo "\nFor more commands try:"
 	@echo "docker compose exec github-processor python3 -m cli summary"
-	@echo "docker compose exec github-processor python3 -m cli show-events BlockScience/koi-net"
+	@echo "docker compose exec github-processor python3 -m cli show-events DynamicalSystemsGroup/koi-net"
 	@echo "docker compose exec github-processor python3 -m cli event-details <event_rid>"
-	@echo "docker compose exec github-processor python3 -m cli add-repo BlockScience/koios"
+	@echo "docker compose exec github-processor python3 -m cli add-repo DynamicalSystemsGroup/koios"
 
 demo-hackmd-cli:
 	@echo "Running HackMD CLI in Docker..."
@@ -247,9 +247,9 @@ cli-help:
 	@echo "========== KOI-NET CLI COMMANDS =========="
 	@echo "\n=== GitHub CLI Commands ==="
 	@echo "List all tracked repos:           docker compose exec github-processor python3 -m cli list-repos"
-	@echo "Show repository events:           docker compose exec github-processor python3 -m cli show-events BlockScience/koi-net [--limit 20]"
+	@echo "Show repository events:           docker compose exec github-processor python3 -m cli show-events DynamicalSystemsGroup/koi-net [--limit 20]"
 	@echo "View event details:               docker compose exec github-processor python3 -m cli event-details <event_rid>"
-	@echo "Add a new repository:             docker compose exec github-processor python3 -m cli add-repo BlockScience/koios"
+	@echo "Add a new repository:             docker compose exec github-processor python3 -m cli add-repo DynamicalSystemsGroup/koios"
 	@echo "Show events summary:              docker compose exec github-processor python3 -m cli summary"
 	@echo "\n=== HackMD CLI Commands ==="
 	@echo "List all notes:                   docker compose exec hackmd-processor python3 -m cli list [--limit 20] [--offset 0] [--search query]"
