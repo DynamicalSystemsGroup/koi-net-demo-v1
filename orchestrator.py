@@ -95,7 +95,7 @@ NODE_CONFIGS = {
         },
         "github": {
             "api_url": "https://api.github.com/",
-            "monitored_repositories": [{"name": "Blockscience/koi-net"}],
+            "monitored_repositories": [{"name": "DynamicalSystemsGroup/koi-net"}],
             "backfill_max_items": 50,
             "backfill_lookback_days": 30,
             "backfill_state_file_path": ".koi/github/github_state.json"
@@ -126,7 +126,7 @@ NODE_CONFIGS = {
             "hackmd_api_token": "HACKMD_API_TOKEN"
         },
         "hackmd": {
-            "team_path": "blockscience",
+            "team_path": "dynamicalsystemsgroup",
             "target_note_ids": ["C1xso4C8SH-ZzDaloTq4Uw"]
         }
     },
@@ -225,12 +225,12 @@ def clone_repo(repo, branch="demo-1"):
         try:
             # First try to clone with the specific branch
             console.print(f"[bold cyan]Cloning {repo} with branch {branch}...[/bold cyan]")
-            run(["git", "clone", "-b", branch, f"https://github.com/BlockScience/{repo}", repo])
+            run(["git", "clone", "-b", branch, f"https://github.com/DynamicalSystemsGroup/{repo}", repo])
             console.print(f"[bold green]Successfully cloned {repo} with branch {branch}[/bold green]")
         except subprocess.CalledProcessError:
             # If branch doesn't exist, fall back to default branch
             console.print(f"[bold yellow]Branch {branch} not found in {repo}, falling back to default branch[/bold yellow]")
-            run(["git", "clone", f"https://github.com/BlockScience/{repo}", repo])
+            run(["git", "clone", f"https://github.com/DynamicalSystemsGroup/{repo}", repo])
             console.print(f"[bold green]Successfully cloned {repo} with default branch[/bold green]")
     else:
         console.print(f"Repo {repo} already exists, will try to update to {branch} branch.")
